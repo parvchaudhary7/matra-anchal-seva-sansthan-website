@@ -429,8 +429,8 @@ export default function TrustLandingPage() {
               </div>
               <div className="flex items-start gap-3">
                 <Mail className="h-5 w-5 mt-1" />
-                <a href="mailto:finadvisor.ankit@gmail.com" className="hover:underline break-all">
-                  finadvisor.ankit@gmail.com
+                <a href="mailto:matraanchalsevasansthan1@gmail.com" className="hover:underline break-all">
+                  matraanchalsevasansthan1@gmail.com
                 </a>
               </div>
               <a
