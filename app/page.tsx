@@ -15,6 +15,8 @@ import {
   MapPin,
   CheckCircle2,
   Shield,
+  MessageCircle,
+  ExternalLink,
 } from "lucide-react"
 
 export default function TrustLandingPage() {
@@ -31,7 +33,9 @@ export default function TrustLandingPage() {
             </div>
             <div className="flex items-center gap-2">
               <Phone className="h-3 w-3" />
-              <span>Helpline: +91-9310198009</span>
+              <a href="tel:+919310198009" className="hover:underline">
+                Helpline: +91-9310198009
+              </a>
             </div>
           </div>
         </div>
@@ -66,6 +70,12 @@ export default function TrustLandingPage() {
               <a href="#contact" className="text-[#334155] hover:text-[#1e3a8a] transition-colors">
                 Contact
               </a>
+              <a
+                href="#donate"
+                className="bg-[#f97316] hover:bg-[#f97316]/90 text-white px-4 py-2 rounded-md transition-colors"
+              >
+                Donate Now
+              </a>
             </nav>
           </div>
         </div>
@@ -85,15 +95,19 @@ export default function TrustLandingPage() {
                 From Haridwar to Faridabad. Join our mission to build the Matra-Anchal Sewa Dham.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button className="bg-[#f97316] hover:bg-[#f97316]/90 text-white px-8 py-6 text-lg animate-pulse">
-                  Donate for Construction
-                </Button>
-                <Button
-                  variant="outline"
-                  className="border-[#1e3a8a] text-[#1e3a8a] hover:bg-[#1e3a8a] hover:text-white px-8 py-6 text-lg bg-transparent"
-                >
-                  View 80G Certificate
-                </Button>
+                <a href="#donate">
+                  <Button className="bg-[#f97316] hover:bg-[#f97316]/90 text-white px-8 py-6 text-lg animate-pulse w-full sm:w-auto">
+                    Donate for Construction
+                  </Button>
+                </a>
+                <a href="/certificates/80g.pdf" target="_blank" rel="noopener noreferrer">
+                  <Button
+                    variant="outline"
+                    className="border-[#1e3a8a] text-[#1e3a8a] hover:bg-[#1e3a8a] hover:text-white px-8 py-6 text-lg bg-transparent w-full sm:w-auto"
+                  >
+                    View 80G Certificate
+                  </Button>
+                </a>
               </div>
             </div>
             <div className="md:col-span-3">
@@ -247,6 +261,14 @@ export default function TrustLandingPage() {
               <h4 className="font-bold text-[#1e3a8a]">Income Tax Exemption</h4>
               <p className="text-sm text-[#334155]">12AB & 80G Approved</p>
               <p className="text-xs text-[#334155] font-mono">AAHTM9837C24LK02</p>
+              <a
+                href="/certificates/80g.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1 text-sm text-[#1e3a8a] hover:underline"
+              >
+                View Certificate <ExternalLink className="h-3 w-3" />
+              </a>
             </Card>
 
             <Card className="border-2 border-[#1e3a8a] bg-white p-6 text-center space-y-4">
@@ -254,6 +276,14 @@ export default function TrustLandingPage() {
               <h4 className="font-bold text-[#1e3a8a]">Govt Registration</h4>
               <p className="text-sm text-[#334155]">NITI Aayog Registered</p>
               <p className="text-xs text-[#334155] font-mono">UA/2025/0537595</p>
+              <a
+                href="/certificates/darpan.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1 text-sm text-[#1e3a8a] hover:underline"
+              >
+                View Certificate <ExternalLink className="h-3 w-3" />
+              </a>
             </Card>
 
             <Card className="border-2 border-[#1e3a8a] bg-white p-6 text-center space-y-4">
@@ -261,20 +291,36 @@ export default function TrustLandingPage() {
               <h4 className="font-bold text-[#1e3a8a]">Corporate Compliance</h4>
               <p className="text-sm text-[#334155]">CSR Registration</p>
               <p className="text-xs text-[#334155] font-mono">CSR00091771</p>
+              <a
+                href="/certificates/csr.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1 text-sm text-[#1e3a8a] hover:underline"
+              >
+                View Certificate <ExternalLink className="h-3 w-3" />
+              </a>
             </Card>
 
             <Card className="border-2 border-[#1e3a8a] bg-white p-6 text-center space-y-4">
               <CheckCircle2 className="h-12 w-12 text-[#1e3a8a] mx-auto" />
-              <h4 className="font-bold text-[#1e3a8a]">MSME Status</h4>
-              <p className="text-sm text-[#334155]">Udyam Registered</p>
-              <p className="text-xs text-[#334155] font-mono">UK-06-0037495</p>
+              <h4 className="font-bold text-[#1e3a8a]">12A Registration</h4>
+              <p className="text-sm text-[#334155]">Income Tax Act</p>
+              <p className="text-xs text-[#334155] font-mono">AAHTM9837C24LK02</p>
+              <a
+                href="/certificates/12a.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1 text-sm text-[#1e3a8a] hover:underline"
+              >
+                View Certificate <ExternalLink className="h-3 w-3" />
+              </a>
             </Card>
           </div>
         </div>
       </section>
 
       {/* SECTION 6: SECURE BANKING */}
-      <section className="py-16 bg-[#f8fafc]">
+      <section id="donate" className="py-16 bg-[#f8fafc]">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto">
             <div className="text-center mb-8 space-y-2">
@@ -383,10 +429,19 @@ export default function TrustLandingPage() {
               </div>
               <div className="flex items-start gap-3">
                 <Mail className="h-5 w-5 mt-1" />
-                <a href="mailto:matraanchalsevasansthan1@gmail.com" className="hover:underline break-all">
-                  matraanchalsevasansthan1@gmail.com
+                <a href="mailto:finadvisor.ankit@gmail.com" className="hover:underline break-all">
+                  finadvisor.ankit@gmail.com
                 </a>
               </div>
+              <a
+                href="https://wa.me/919310198009?text=Hari%20Om.%20I%20want%20to%20donate."
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-md transition-colors mt-2"
+              >
+                <MessageCircle className="h-5 w-5" />
+                Chat on WhatsApp
+              </a>
             </div>
 
             {/* Column 3: Legal */}
